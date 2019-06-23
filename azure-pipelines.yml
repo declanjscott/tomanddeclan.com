@@ -10,10 +10,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: AzureFileCopy@3
+  inputs:
+    SourcePath: './'
+    azureSubscription: 'Free Trial(01f81824-e084-43ca-96d4-a70fde860693)'
+    Destination: 'AzureBlob'
+    storage: 'tomanddeclan'
+    ContainerName: '$web'
+    displayName: Upload static files to Azure
