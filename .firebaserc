@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "tomanddeclan"
+  },
+  "targets": {
+    "tomanddeclan": {
+      "hosting": {
+        "tomanddeclan-staging": [
+          "tomanddeclan-staging"
+        ],
+        "tomanddeclan": [
+          "tomanddeclan"
+        ]
+      }
+    }
   }
 }

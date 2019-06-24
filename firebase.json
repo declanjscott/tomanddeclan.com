@@ -1,6 +1,22 @@
 {
-  "hosting": {
+  "hosting": [ {
     "public": "public",
+    "target": "tomanddeclan",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  {
+    "public": "public",
+    "target": "tomanddeclan-staging",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -13,4 +29,5 @@
       }
     ]
   }
+  ] 
 }
