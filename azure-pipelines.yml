@@ -16,6 +16,7 @@ steps:
     contents: |
       **/public/**
       firebase.json
+      .firebaserc
     targetFolder: $(Build.ArtifactStagingDirectory)
   displayName: 'Copy public site files'
 
